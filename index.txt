@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FIT IN 30 | 30-Day Hardcore Body Transformation</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --dark: #121212;
+      --accent: #ff4d4d;
+      --light: #e0e0e0;
+      --gray: #2a2a2a;
+    }
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background-color: var(--dark);
+      color: var(--light);
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem 0;
+      text-align: center;
+    }
+    h1, h2, h3 {
+      font-family: 'Playfair Display', serif;
+    }
+    .hero {
+      background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: 4rem;
+      margin: 0;
+      color: var(--light);
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    }
+    .hero p {
+      font-size: 1.5rem;
+      margin: 1rem 0 2rem;
+      color: var(--light);
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+      max-width: 600px;
+    }
+    .cta-button {
+      background: var(--accent);
+      color: white;
+      padding: 0.8rem 2rem;
+      border: none;
+      border-radius: 8px;
+      font-weight: bold;
+      font-size: 1.2rem;
+      text-decoration: none;
+      transition: 0.3s;
+      display: inline-block;
+      margin-top: 1rem;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+    .cta-button:hover {
+      background: #ff3333;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 8px rgba(0,0,0,0.15);
+    }
+    .benefits {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin: 4rem 0;
+    }
+    .benefit-card {
+      background: var(--gray);
+      padding: 2rem;
+      border-radius: 10px;
+      border-left: 5px solid var(--accent);
+      transition: 0.3s;
+    }
+    .benefit-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    }
+    .countdown {
+      background: var(--gray);
+      padding: 2rem;
+      border-radius: 10px;
+      margin: 2rem auto;
+      max-width: 500px;
+    }
+    .countdown-timer {
+      font-size: 2rem;
+      font-weight: bold;
+      margin: 1rem 0;
+      color: var(--accent);
+    }
+    .testimonials {
+      margin: 4rem 0;
+    }
+    .testimonial-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    .testimonial-card {
+      background: var(--gray);
+      padding: 2rem;
+      border-radius: 10px;
+      text-align: left;
+    }
+    .testimonial-card img {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-right: 1rem;
+      float: left;
+    }
+    .guarantee-badge {
+      background: var(--accent);
+      color: white;
+      padding: 1rem;
+      border-radius: 8px;
+      display: inline-block;
+      margin: 2rem 0;
+      font-weight: bold;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+      background: black;
+      margin-top: 4rem;
+    }
+    
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2.5rem;
+      }
+      .hero p {
+        font-size: 1.2rem;
+      }
+      .benefits, .testimonial-grid {
+        grid-template-columns: 1fr;
+      }
+      .countdown-timer {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Hero Section -->
+<section class="hero">
+  <div class="container">
+    <h1>FIT IN 30</h1>
+    <p>30 Days to a Hardcore Transformation — No Gym Required. Only $9.</p>
+    <a href="https://gumroad.com/l/YOUR_LINK" class="cta-button">Get Instant Access</a>
+  </div>
+</section>
+
+<!-- Countdown Timer -->
+<section class="container countdown">
+  <h2>OFFER ENDS IN:</h2>
+  <div class="countdown-timer" id="countdown">
+    23:59:59
+  </div>
+  <p>Limited-time discount price — claim your spot now!</p>
+</section>
+
+<!-- Benefits Section -->
+<section class="container">
+  <h2>What You'll Get:</h2>
+  <div class="benefits">
+    <div class="benefit-card">
+      <h3>💪 Full Body Strength</h3>
+      <p>Daily workouts that build real muscle and burn fat using only bodyweight.</p>
+    </div>
+    <div class="benefit-card">
+      <h3>🔥 Fat-Melting HIIT</h3>
+      <p>High-intensity sessions to maximize your metabolism in just 20 minutes.</p>
+    </div>
+    <div class="benefit-card">
+      <h3>📆 Printable Progress Calendar</h3>
+      <p>Stay on track and celebrate your daily wins with our battle-tested system.</p>
+    </div>
+    <div class="benefit-card">
+      <h3>🍎 Nutrition Guide</h3>
+      <p>Simple meals to fuel your gains — no complicated recipes or supplements.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials -->
+<section class="container testimonials">
+  <h2>Success Stories</h2>
+  <div class="testimonial-grid">
+    <div class="testimonial-card">
+      <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Alex K.">
+      <p>"I lost 18 pounds in 30 days without stepping foot in a gym. This program changed my life!"</p>
+      <p><strong>— Alex K.</strong></p>
+    </div>
+    <div class="testimonial-card">
+      <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Sarah J.">
+      <p>"Finally a program that doesn't require expensive equipment or supplements. The nutrition guide alone is worth it!"</p>
+      <p><strong>— Sarah J.</strong></p>
+    </div>
+    <div class="testimonial-card">
+      <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Marcus T.">
+      <p>"Went from barely doing 5 pushups to 50 consecutive reps. The progressive system really works."</p>
+      <p><strong>— Marcus T.</strong></p>
+    </div>
+  </div>
+</section>
+
+<!-- Guarantee -->
+<section class="container">
+  <div class="guarantee-badge">
+    30-Day 100% Money-Back Guarantee
+  </div>
+  <p>If you don't see results in 30 days, we'll refund every penny. No questions asked.</p>
+</section>
+
+<!-- Final CTA -->
+<section class="container" style="margin-top: 4rem;">
+  <h2>Are You Ready to Transform?</h2>
+  <p>Make the decision today. Change your body. Upgrade your mindset. Only $9.</p>
+  <a href="https://gumroad.com/l/YOUR_LINK" class="cta-button">Start My Transformation Now</a>
+</section>
+
+<!-- Footer -->
+<footer>
+  <p>© 2025 Relentless Training Co. | <a href="#" style="color: var(--accent);">Terms</a> | <a href="#" style="color: var(--accent);">Privacy</a></p>
+</footer>
+
+<script>
+  // Countdown Timer (24 hours)
+  function updateCountdown() {
+    const now = new Date();
+    const end = new Date();
+    end.setHours(23, 59, 59, 999);
+    
+    const diff = end - now;
+    
+    const hours = Math.floor(diff / (1000 * 60 * 60));
+    const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+    
+    document.getElementById('countdown').innerHTML = 
+      `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+  }
+  
+  setInterval(updateCountdown, 1000);
+  updateCountdown();
+</script>
+
+</body>
+</html>
