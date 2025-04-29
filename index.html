@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>FIT IN 30 | 30-Day Hardcore Body Transformation</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
   <style>
     :root {
       --dark: #121212;
@@ -90,42 +90,6 @@
       transform: translateY(-5px);
       box-shadow: 0 10px 20px rgba(0,0,0,0.2);
     }
-    .countdown {
-      background: var(--gray);
-      padding: 2rem;
-      border-radius: 10px;
-      margin: 2rem auto;
-      max-width: 500px;
-    }
-    .countdown-timer {
-      font-size: 2rem;
-      font-weight: bold;
-      margin: 1rem 0;
-      color: var(--accent);
-    }
-    .testimonials {
-      margin: 4rem 0;
-    }
-    .testimonial-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 2rem;
-      margin-top: 2rem;
-    }
-    .testimonial-card {
-      background: var(--gray);
-      padding: 2rem;
-      border-radius: 10px;
-      text-align: left;
-    }
-    .testimonial-card img {
-      width: 60px;
-      height: 60px;
-      border-radius: 50%;
-      object-fit: cover;
-      margin-right: 1rem;
-      float: left;
-    }
     .guarantee-badge {
       background: var(--accent);
       color: white;
@@ -142,7 +106,6 @@
       background: black;
       margin-top: 4rem;
     }
-    
     @media (max-width: 768px) {
       .hero h1 {
         font-size: 2.5rem;
@@ -150,12 +113,16 @@
       .hero p {
         font-size: 1.2rem;
       }
-      .benefits, .testimonial-grid {
+      .benefits {
         grid-template-columns: 1fr;
       }
-      .countdown-timer {
-        font-size: 1.5rem;
-      }
+    }
+    .gumroad-embed {
+      margin: 2rem auto;
+      max-width: 500px;
+      padding: 1rem;
+      background: var(--gray);
+      border-radius: 8px;
     }
   </style>
 </head>
@@ -166,17 +133,8 @@
   <div class="container">
     <h1>FIT IN 30</h1>
     <p>30 Days to a Hardcore Transformation — No Gym Required. Only $9.</p>
-    <a href="https://gumroad.com/l/YOUR_LINK" class="cta-button">Get Instant Access</a>
+    <a href="https://relentlessco.gumroad.com/l/pjzmj?utm_source=website" class="cta-button">Get Instant Access</a>
   </div>
-</section>
-
-<!-- Countdown Timer -->
-<section class="container countdown">
-  <h2>OFFER ENDS IN:</h2>
-  <div class="countdown-timer" id="countdown">
-    23:59:59
-  </div>
-  <p>Limited-time discount price — claim your spot now!</p>
 </section>
 
 <!-- Benefits Section -->
@@ -202,24 +160,12 @@
   </div>
 </section>
 
-<!-- Testimonials -->
-<section class="container testimonials">
-  <h2>Success Stories</h2>
-  <div class="testimonial-grid">
-    <div class="testimonial-card">
-      <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Alex K.">
-      <p>"I lost 18 pounds in 30 days without stepping foot in a gym. This program changed my life!"</p>
-      <p><strong>— Alex K.</strong></p>
-    </div>
-    <div class="testimonial-card">
-      <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Sarah J.">
-      <p>"Finally a program that doesn't require expensive equipment or supplements. The nutrition guide alone is worth it!"</p>
-      <p><strong>— Sarah J.</strong></p>
-    </div>
-    <div class="testimonial-card">
-      <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Marcus T.">
-      <p>"Went from barely doing 5 pushups to 50 consecutive reps. The progressive system really works."</p>
-      <p><strong>— Marcus T.</strong></p>
+<!-- Gumroad Embed -->
+<section class="container">
+  <div class="gumroad-embed">
+    <script src="https://gumroad.com/js/gumroad-embed.js"></script>
+    <div class="gumroad-product-embed" data-gumroad-product-id="pjzmj">
+      <a href="https://relentlessco.gumroad.com/l/pjzmj">Loading...</a>
     </div>
   </div>
 </section>
@@ -232,38 +178,10 @@
   <p>If you don't see results in 30 days, we'll refund every penny. No questions asked.</p>
 </section>
 
-<!-- Final CTA -->
-<section class="container" style="margin-top: 4rem;">
-  <h2>Are You Ready to Transform?</h2>
-  <p>Make the decision today. Change your body. Upgrade your mindset. Only $9.</p>
-  <a href="https://gumroad.com/l/YOUR_LINK" class="cta-button">Start My Transformation Now</a>
-</section>
-
 <!-- Footer -->
 <footer>
   <p>© 2025 Relentless Training Co. | <a href="#" style="color: var(--accent);">Terms</a> | <a href="#" style="color: var(--accent);">Privacy</a></p>
 </footer>
-
-<script>
-  // Countdown Timer (24 hours)
-  function updateCountdown() {
-    const now = new Date();
-    const end = new Date();
-    end.setHours(23, 59, 59, 999);
-    
-    const diff = end - now;
-    
-    const hours = Math.floor(diff / (1000 * 60 * 60));
-    const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-    const seconds = Math.floor((diff % (1000 * 60)) / 1000);
-    
-    document.getElementById('countdown').innerHTML = 
-      `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
-  }
-  
-  setInterval(updateCountdown, 1000);
-  updateCountdown();
-</script>
 
 </body>
 </html>
